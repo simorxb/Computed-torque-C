@@ -23,9 +23,9 @@ tau = m\*l^2\*ddtheta + k\*dtheta + m\*g\*l\*sin(theta)
 
 The computed torque control law is:
 
-tau = m*l^2*(ddtheta_des + u) + m*g*l*sin(theta) + k*dtheta
+tau = m\*l^2\*(ddtheta_des + u) + m\*g\*l\*sin(theta) + k\*dtheta
 
-with u = kp*e + kd*de + ki*int(e)
+with u = kp\*e + kd\*de + ki\*int(e)
 
 where e = theta_des - theta
 
@@ -33,7 +33,7 @@ To implement this example in C I have used 6 functions:
 
 1/ PID_Step
 
-To implement the PID term in the control law u = kp*e + kd*de + ki*int(e).
+To implement the PID term in the control law u = kp\*e + kd\*de + ki\*int(e).
 
 Uses a filtered derivative for the D component.
 
@@ -70,7 +70,7 @@ Runs a while loop 6000 times (60 seconds with 0.01s sample time)
 
 For each loop runs the computed torque algorithm using the previous value of theta and the current setpoint, runs the pendulum step using the output and then logs in a text file
 
-To give some "real world" flavour to the simulation, the computed torque term is calculated using m_est = 1.1*m, l_est = l*1.1 and k_est = k*1.1.
+To give some "real world" flavour to the simulation, the computed torque term is calculated using m_est = 1.1\*m, l_est = l\*1.1 and k_est = k\*1.1.
 
 Essentially the control algorithm thinks that all the parameters are 10% bigger.
 
