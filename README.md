@@ -19,7 +19,7 @@ As the pendulum is a simple case of a robot manipulator, we can control it using
 
 The equation of motion is:
 
-tau = m*l^2*ddtheta + k*dtheta + m*g*l*sin(theta)
+tau = m\*l^2\*ddtheta + k\*dtheta + m\*g\*l\*sin(theta)
 
 The computed torque control law is:
 
